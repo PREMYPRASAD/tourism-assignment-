@@ -28,72 +28,41 @@
     </nav>
     <!-- navbar end -->
 
+
     <!-- signup form start -->
-    <div class="container" style=" background-color: rgb(253, 253, 250); width: 500px; opacity: 75%; padding: 20px;margin-top: 100px;">
 
-        <form action="destinations.html" onsubmit="return validate()">
-            <h3 style="text-align: center;">Sign up</h3>
-            <div class="col-md-12 myMargin">
-                <form class="row g-3">
+    <form action="success.html" id="inputform" onsubmit="return validate();" style="border: 2px solid rgb(12, 12, 12); margin-top: 1%; margin-left: 18%; margin-right: 18%;">
+        <h2 class="text-center text-black my-3">CREATE AN ACCOUNT</h2>
+        <hr><br><br>
+        <label style="margin-right: 5%; font-size: 20px;">Name:</label>
+        <input type="text" onkeyup="validate();" placeholder="Enter your name" style="width: 65%;" id="name"><br>
+        <label style="margin-left: 35%;" id="namer"></label><br><br>
+        <label style="margin-right: 5%; font-size: 20px;">E-mail:</label>
+        <input type="text" onkeyup="validate();" placeholder="Enter your email id" style="width: 65%;" id="em"><br>
+        <label style="margin-left: 35%;" id="emer"></label><br><br>
+        <label style="margin-right: 5%; font-size: 20px;">Mobile no:</label>
+        <input type="text" onkeyup="validate();" placeholder="Enter mobile no." style="width: 65%;" id="mob"><br>
+        <label style="margin-left: 35%;" id="mer"></label><br><br>
+        <label style="margin-right: 5%; font-size: 20px;">Password:</label>
+        <input type="password" onkeyup="validate();" placeholder="Enter six digit password" style="width: 65%;" id="pw"><br>
+        <p style="font-size: 16px; float: right;" class="text-white">show password<input class="my-2 mx-2" type="checkbox" onclick="tog();"></p>
+        <meter id="met" style="margin-left: 35%;" max="15" min="0" value="0" high="8" low="5" optimum="10"></meter><br>
+        <div style="padding-left: 25%; margin-left: 10%;" class="text-white">
+            <p>Password must contain</p>
+            <div class="d-flex">
+                <p style="margin-left: 5px;margin-right: 5px;">8 characters</p><img id="et" style="height: 20px;" src="images/black.jpg" alt="">
+                <p style="margin-left: 5px;margin-right: 5px;">Uppercase</p><img id="up" style="height: 20px;" src="images/black.jpg" alt="">
+                <p style="margin-left: 2%;margin-right: 5px;">Lowercase</p><img id="lw" style="height: 20px; " src="images/black.jpg" alt="">
+                <p style=" margin-left: 2%;margin-right: 5px;">Number</p><img id="nm" style="height: 20px;" src="images/black.jpg" alt=""></div>
+        </div>
+        <label style="margin-left: 35%;" id="per"></label><br><br>
+        <label style="margin-right: 5%; font-size: 20px;">Conform password:</label>
+        <input type="password" onkeyup="validate();" placeholder="Re-enter password" style="width: 65%;" id="cpw"><br>
+        <label style="margin-left: 35%;" id="cper"></label><br><br>
+        <button class="rounded" style="width: 100%;" type="submit">Signup</button>
+    </form>
+    <!-- signup form end -->
 
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <label for="" class="form-label">First Name</label>
-                            <input type="text" class="form-control" id="firstName" onkeyup="firstname()">
-                        </div>
-
-                        <div class="col-sm-6">
-                            <label for="" class="form-label">Last Name(Optional)</label>
-                            <input type="text" class="form-control" id="lastName">
-                        </div>
-                    </div>
-                    <br>
-
-                    <div class="col-sm-12">
-                        <label for="inputEmail4" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="inputEmail" placeholder="Enter Email" onkeyup="mail() ">
-                    </div>
-                    <br>
-                    <div class="col-sm-12">
-                        <label for="inputPassword4" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="inputPassword1" placeholder="Enter Password" onkeyup="pass1()">
-                        <i class="bi bi-eye-slash" id="togglePassword1"></i>
-                    </div>
-                    <!-- <span id="passwordHelpInline" class="form-text" style="font-weight: 700;">
-        Must be min 8 characters long.
-      </span> -->
-
-                    <div class="progress">
-                        <div id="progress-strength" class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
-                            <Span></Span>
-                        </div>
-                    </div>
-                    <br>
-                    <!--div id="message">
-                        <h6>Password must contain:</h6>
-                        <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
-                        <p id="capital" class="invalid">A <b>uppercase</b> letter</p>
-                        <p id="number" class="invalid">A <b>number</b></p>
-                        <p id="length" class="invalid">Minimum <b>8 characters</b></p>
-                    </div>-->
-                    <div class="col-sm-12">
-                        <label for="inputAddress" class="form-label">Retype Password</label>
-                        <input type="password" class="form-control" id="inputPassword2" onkeyup="pass2()">
-                    </div>
-                    <br>
-                    <div class="col-sm-12">
-                        <label for="inputAddress2" class="form-label">Mobile Number</label>
-                        <input type="text" class="form-control" id="mobileNumber" onkeyup="mob()">
-                    </div>
-
-                    <br>
-                    <div class="col-sm-12">
-                        <button type="submit" class="btn btn-primary">Sign up</button>
-                    </div>
-                </form>
-
-            </div>
-        </form>
     </div>
     <!-- footer start -->
     <div class="row fixed-bottom ">
@@ -102,6 +71,7 @@
         </footer>
     </div>
     <!-- footer end  -->
+    <script src="./js/signupvalidate.js"></script>
 </body>
 
 </html>
