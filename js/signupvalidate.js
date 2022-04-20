@@ -30,7 +30,6 @@ var c = 0;
 
 function validate() {
     uname();
-    // adr();
     mail();
     phone();
     paswd();
@@ -55,18 +54,7 @@ function uname() {
     }
 }
 
-/*function adr() {
-    if (adrs.value.trim() == "") {
-        ader.innerHTML = "This field can not be empty.";
-        ader.style.color = "red";
-        adrs.style.border = "2px solid red";
-        return a = 0;
-    } else {
-        ader.innerHTML = "";
-        adrs.style.border = "";
-        return a = 1;
-    }
-}*/
+
 
 function mail() {
     if (email.value.trim() == "") {
@@ -112,10 +100,6 @@ function phone() {
 
 function paswd() {
     if (pwd.value.trim() == "") {
-        up.setAttribute("src", "images/black.jpg");
-        lw.setAttribute("src", "images/black.jpg");
-        nm.setAttribute("src", "images/black.jpg");
-        et.setAttribute("src", "images/black.jpg");
         per.innerHTML = "Password can not be empty."
         per.style.color = "red";
         pwd.style.border = "2px solid red";
@@ -126,11 +110,8 @@ function paswd() {
         pwd.style.border = "";
         if (pwd.value.length >= 8) {
 
-            et.setAttribute("src", "images/TIK.png");
+
             if (pas.test(pwd.value)) {
-                up.setAttribute("src", "images/TIK.png");
-                lw.setAttribute("src", "images/TIK.png");
-                nm.setAttribute("src", "images/TIK.png");
                 per.innerHTML = "Password is strong.";
                 per.style.color = "rgb(16, 247, 8)";
                 pwd.style.border = "2px solid rgb(16, 247, 8)";
@@ -139,30 +120,30 @@ function paswd() {
             } else {
 
                 if (uper.test(pw.value)) {
-                    up.setAttribute("src", "images/TIK.png");
+
                     meter.value = "7";
                 } else {
-                    up.setAttribute("src", "images/black.jpg");
+
                     meter.value = "6";
                 }
                 if (lowr.test(pw.value)) {
-                    lw.setAttribute("src", "images/TIK.png");
+
                     meter.value = "7";
                 } else {
-                    lw.setAttribute("src", "images/black.jpg");
+
                     meter.value = "6";
                 }
                 if (numr.test(pw.value)) {
-                    nm.setAttribute("src", "images/TIK.png");
+
                     meter.value = "7";
                 } else {
-                    nm.setAttribute("src", "images/black.jpg");
+
                     meter.value = "6";
                 }
             }
 
         } else {
-            et.setAttribute("src", "images/black.jpg");
+
             per.innerHTML = "Password is too weak.";
             per.style.color = "red";
             pwd.style.border = "2px solid red";
